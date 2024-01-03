@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body id =body>
+<style>
+  #body{
+    background-color:aliceblue;}
+.head{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.div5{
+    background-color: lightblue;
+    height: 600px;
+    width: 300px;
+    justify-content: center;
+    margin: auto;
+    font-family:cursive;
+    border: 1px darkgrey double;
+    border-radius: 10px;
+    box-shadow: teal 5px 5px 5px 5px;
+}
+.div6{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img1{
+    border-radius: 10px;
+}
+.img2{
+    display: none;
+    border-radius: 10px;
+}
+.img3{
+    display: none;
+    border-radius: 10px;
+}
+.svg{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-style: italic;
+    padding-top: 15px;
+    align-items: center;
+}
+.para{
+    padding-left: 10px;
+    text-indent: 10px;
+    justify-content: center;
+}
+.color{
+    height: 30px;
+    width: 30px;
+    border: double black 1px;
+    border-radius: 50%;
+}
+.coloricon{
+    padding-left: 10px;
+    align-content: center;
+}
+.shoes1{
+    background-color: black;
+}
+.shoes2{
+    background-color: rgba(241, 64, 11, 0.992);
+}
+.shoes3{
+    background-color: rgb(74, 167, 234);
+}
+.cart{
+    margin: 10%;
+    color:darkslategrey;
+}
+.cart:hover{
+    transform: scale(1.1);
+    background-color: salmon;
+}
+</style>
+<h1 class="head">Level 3 :</h1>
+<center>
+    <center>
+    <div>
+        <h1 style="color: rgb(30, 197, 209);">Animated Product card</h1>
+    </div>
+</center>
+    <div class="div5">
+        <span class="svg"><img src="nike.png" alt="no img" style="height: 30px; padding:5px;">
+            Nikee</span>
+    <div class="div6">
+        <img id="image1" src="shoe blck.webp" alt="no img found" class="img1" style="height: 250px; width: 300px;">
+        <img id="image2" src="shoe orange.jpeg" alt="no img found" class="img2" style="height: 250px; width: 300px;">
+        <img id="image3" src="shoe1.webp" alt="no img found" class="img3" style="height: 250px; width: 300px;">
+   </div>
+   
+   <p style="font-style: italic; font-size: 35px; padding-left: 10px;" ><b>Gaze 2x</b> </p>
+
+   <p class="para">Lorem ipsum dolor sit amet consectetur elit. Quo dolores omnis nemo 
+   vero dolorum asperiores et dolore. </p>
+   
+       <span class="coloricon"><b>Colour:</b> </span>
+       <button id="black" class="color shoes1"></button>
+       <button id="orange" class="color shoes2"></button>
+       <button id="blue" class="color shoes3"></button>
+  <br>
+  <center>
+   <button class="cart">Add to cart</button>
+  </center>
+<script>
+var firstImg = document.getElementById("image1") ;
+        var secondImg = document.getElementById("image2") ;
+        var thridImg = document.getElementById("image3") ;
+        var btnImg1 = document.getElementById("black");
+        var btnImg2 = document.getElementById("orange");
+        var btnImg3 = document.getElementById("blue");
+        
+        btnImg1.addEventListener("click", image1function);
+        function image1function(){
+            firstImg.style.display = "block";
+            secondImg.style.display = "none";
+            thridImg.style.display = "none";
+        }
+
+        btnImg2.addEventListener("click", image2function);
+        function image2function(){
+            firstImg.style.display="none";
+            thridImg.style.display = "none";
+            secondImg.style.display = "block";
+        }
+
+        btnImg3.addEventListener("click", image3function);
+        function image3function(){
+            firstImg.style.display="none";
+            secondImg.style.display = "none";
+            thridImg.style.display = "block";
+        }
+</script>
+</body>
+</html>
+
