@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body id =body>
+<style>
+#body{
+    background-color:aliceblue;}
+.head{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div3{
+    background-color: rgb(22, 22, 63);
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    align-items: center;
+    width: 800px; 
+    justify-content: center;
+}
+.word{
+    position: relative;
+    font-weight: 500;
+    font-size: 30px;
+    color: crimson;
+}
+.text1{
+    color: turquoise;
+}
+.text2::before{
+    content: "";
+    position: absolute;
+    padding-left: 5px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(22, 22, 63);
+    border-left: 2px solid tan;
+    animation: animate 4s steps(12) infinite;
+}
+
+
+@keyframes animate {
+    40%,60%{
+        left:100%;
+    }
+    100%{
+        left:0%
+    }
+    }
+</style>
+<h1 class="head">Level 2 :</h1>
+    <center>
+        <div>
+            <h1 style="color: rgb(30, 197, 209);">MultiLine Texting</h1>
+        </div>
+        <div class="div3"> 
+             <div class="div4">
+                <span class="word text1" style=" font-family: 'Impact,Charcoal,sans-serif'">I'm a</span>
+                <span class="word text2" style=" font-family: 'Impact,Charcoal,sans-serif'">Freelancer</span>    
+            </div>
+            </div>
+</center>
+<script>
+const text = document.querySelector(".text2");
+
+        const textload = ()=>{
+            setTimeout(()=>{
+                text.textContent="Freelancer";
+            },0);
+            setTimeout(()=>{
+                text.textContent="Blogger";
+            },4000);
+            setTimeout(()=>{
+                text.textContent="YouTuber";
+            },7000);
+        }
+
+        textload();
+</script>
+</body>
+</html>
